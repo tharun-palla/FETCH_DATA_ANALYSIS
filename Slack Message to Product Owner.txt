@@ -1,0 +1,43 @@
+Slack Message:
+
+Hi @ProductLeader
+We were given with 3 Data Tables USERS, TRANSACTIONS & PRODUCTS. Here are data quality issues that were discovered during our analysis:
+
+1. There are some discrepancies with BARCODE column in TRANSACTIONS Table. Each RECEIPT_ID has multiple transactions recorded which might be because each receipt would have multiple products. But, It's surprising to see that all barcodes are same for one RECEIPT_ID. After verifying products table, We noticed that same product is associated with multiple receipts but all these receipts contain only one product barcode appearing in multiple transactions.
+
+2. 94 Transactions were reported having SCAN_DATE before PURCHASE_DATE. Logically it doesn't make sense because user cannot scan a receipt before purchasing.
+
+3. There might be error in coding FINAL_SALE col making NULL values as ' ' with space not allowing system to consider them as NULL instead a character. Such values have a count of 12500 out of 50000 transactions.
+
+One interesting trend we observed in our user base is that from 2014 - 2020 Fetch has rapidly increased it's user base. But from 2021, which is the year of covid, Fetch's growth rate slowed down considerably. In 2023 Fetch has observed declining user growth for the first time with 43% downturn decrease in new user acquisition. This was continued in 2024 as well but on the positive note the decline of new user acquisition is better than year 2023. 2023 and 2024 indicate a significant downturn, with a drop in the user base both in absolute numbers and percentage growth, suggesting a challenging trend in user acquisition.
+
+Below is a summary of year-over-year (YoY) growth:
+
+| **Year** | **Users This Year** | **Users Last Year** | **YoY Percentage Growth** |
+|----------|---------------------|---------------------|---------------------------|
+| 2014     | 30                  | N/A                 | N/A                       |
+| 2015     | 51                  | 30.0                | 70.00%                    |
+| 2016     | 70                  | 51.0                | 37.25%                    |
+| 2017     | 644                 | 70.0                | 820.00%                   |
+| 2018     | 2,168               | 644.0               | 236.65%                   |
+| 2019     | 7,093               | 2,168.0             | 227.17%                   |
+| 2020     | 16,883              | 7,093.0             | 138.02%                   |
+| 2021     | 19,159              | 16,883.0            | 13.48%                    |
+| 2022     | 26,807              | 19,159.0            | 39.92%                    |
+| 2023     | 15,464              | 26,807.0            | -42.31%                   |
+| 2024     | 11,631              | 15,464.0            | -24.79%                   |
+
+
+Are there any specific actions or business decisions that could explain the user growth slowdown starting in 2021? Was this a direct result of external factors (e.g., the pandemic) or internal changes (e.g., product changes, marketing strategies)?
+
+Given the declining user acquisition, what steps are being taken or considered to reverse this trend? Any strategies for increasing user growth or addressing possible user churn?
+
+We also observed that most of our users are in age group 21 - 55 
+
+Next Steps:
+1. It would be helpful if you can clarify data discrepancies in TRANSACTIONS table to further analyze users purchase behavior.
+2. How does Fetch handle Network Issues while uploading receipts, Is the SCAN_DATE > PURCHASE_DATE errors because of application/network issues?
+3. Business question about NULL FINAL_SALE value, How are these handled when accounting for user reward points?
+4. We are interested to find possible reasons why user growth slowdown. If we can have access user activity data in the application, rewards allocation data, marketing data, It can further help our analysis to point down the cause and recommend some actionable insights to improve user growth.
+
+
