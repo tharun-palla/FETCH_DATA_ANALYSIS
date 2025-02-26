@@ -32,7 +32,7 @@ Are there any specific actions or business decisions that could explain the user
 
 Given the declining user acquisition, what steps are being taken or considered to reverse this trend? Any strategies for increasing user growth or addressing possible user churn?
 
-We also observed that most of our users are in age group 21 - 55 
+Another interesting fact about our users is that most of our users are in age group 21 - 55 with majority of user group as Females.
 
 Next Steps:
 1. It would be helpful if you can clarify data discrepancies in TRANSACTIONS table to further analyze users purchase behavior.
